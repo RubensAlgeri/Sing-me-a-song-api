@@ -4,7 +4,7 @@ import { faker } from "@faker-js/faker";
 export async function generateRecommendation() {
   const recommendation = {
     name: faker.random.words(),
-    youtubeLink: "https://www.youtube.com/watch?v=chwyjJbcs1Y"
+    youtubeLink: `https://www.youtube.com/watch?v=${faker.random.alphaNumeric(11)}`,
   }
   return recommendation;
 }

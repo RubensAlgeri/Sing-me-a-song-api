@@ -2,11 +2,35 @@ import { prisma } from "./../../src/database.js";
 import * as recommendationFactory from "./recommendationFactory.js";
 
 
-export async function createScenarioOneRecommendation() {
+export async function createScenarioOneRecommendationWithZeroViews() {
   const data = await recommendationFactory.generateRecommendation()
   await recommendationFactory.createRecommendation(data);
 
   return data
+}
+
+export async function createScenarioTwoRecommendationWithTenViews() {
+  const data = await recommendationFactory.generateRecommendation()
+  const newData = {...data, score:10}
+  await recommendationFactory.createRecommendation(newData);
+
+  return data
+}
+
+export async function createScenarioThreeRecommendationWithMinusFiveViews() {
+  const data = await recommendationFactory.generateRecommendation()
+  const newData = {...data, score:-5}
+  await recommendationFactory.createRecommendation(newData);
+
+  return data
+}
+
+export async function createScenarioFourElevenRecommendationsWithRandomViews() {
+  for(let i = 0; i<11;i++){
+    const data = await recommendationFactory.generateRecommendation()
+    const newData = {...data, score:Math.floor(Math.random()*1005-5)}
+    await recommendationFactory.createRecommendation(newData);
+  }
 }
 
 export async function deleteAllData() {
