@@ -26,11 +26,8 @@ export async function createScenarioThreeRecommendationWithMinusFiveViews() {
 }
 
 export async function createScenarioFourElevenRecommendationsWithRandomViews() {
-  for(let i = 0; i<11;i++){
-    const data = await recommendationFactory.generateRecommendation()
-    const newData = {...data, score:Math.floor(Math.random()*1005-5)}
-    await recommendationFactory.createRecommendation(newData);
-  }
+  const data = await recommendationFactory.generateNRecommendationsWithRandomScore(11)
+  await recommendationFactory.createRecommendation(data);
 }
 
 export async function deleteAllData() {
