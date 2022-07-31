@@ -141,7 +141,7 @@ describe("user tests", () => {
         take:amount,
       });
     for(let i=0;i<amount-1;i++){
-      expect(response.body[i].score).toBeGreaterThan(response.body[i+1].score)
+      expect(response.body[i].score).toBeGreaterThanOrEqual(response.body[i+1].score)
     }
     expect(response.body).toStrictEqual(recommendationCreated)
   });
