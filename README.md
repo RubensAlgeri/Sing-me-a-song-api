@@ -31,8 +31,8 @@ Este é um projeto full-stack que armazena, classifica e reproduz links do YouTu
     - Rota para registrar um novo link de recomendação
     - headers: {}
     - body: {
-        "name": "Some no-repeated name",
-        "youtubeLink": "https://youtu.be/..." || "https://youtube.com/..."
+        "name": "Um nome ainda não utilizado",
+        "youtubeLink": "https://youtu.be/..." ou "https://youtube.com/..."
     }
 ```
 
