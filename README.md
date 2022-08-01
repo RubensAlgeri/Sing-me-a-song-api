@@ -74,7 +74,7 @@ Este é um projeto full-stack que armazena, classifica e reproduz links do YouTu
 ## :rocket: Rota Exclusiva para teste
 
 ```yml
-- DELETE /reset
+- DELETE /reset-database
     - Route to erase all database
     - headers: {}
     - body: {}
