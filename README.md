@@ -28,7 +28,7 @@ Este é um projeto full-stack que armazena, classifica e reproduz links do YouTu
 
 ```yml
 - POST /recommendations
-    - Route to register a new recommendation link
+    - Rota para registrar um novo link de recomendação
     - headers: {}
     - body: {
         "name": "Some no-repeated name",
@@ -38,35 +38,35 @@ Este é um projeto full-stack que armazena, classifica e reproduz links do YouTu
 
 ```yml
 - GET /recommendations
-    - Route to get a list of 10 recommendations
+    - Rota para obter uma lista das 10 últimas recomendações
     - headers: {}
     - body: {}
 ```
 
 ```yml
 - GET /recommendations/top/:amount
-    - Route to get a list of the top amount of recommendations
+    - Rota para obter uma lista com as recomendações mais bem avaliadas
     - headers: {}
     - body: {}
 ```
 
 ```yml
 - GET /recommendations/:id
-    - Route to get the recommendation with the corresponding id
+    - Rota para obter a recomendação por seu id
     - headers: {}
     - body: {}
 ```
 
 ```yml
 - POST /recommendations/:id/upvote
-    - Route to increase the score of the recommendation with the corresponding id by 1
+    - Rota para aumentar a pontuação da recomendação por seu id em 1
     - headers: {}
     - body: {}
 ```
 
 ```yml
 - POST /recommendations/:id/downvote
-    - Route to decrement the score of the recommendation with the corresponding id by 1
+    - Rota para diminuir a pontuação da recomendação por seu id em 1
     - headers: {}
     - body: {}
 ```
@@ -75,7 +75,7 @@ Este é um projeto full-stack que armazena, classifica e reproduz links do YouTu
 
 ```yml
 - DELETE /reset-database
-    - Route to erase all database
+    - Rota para zerar o banco de dados
     - headers: {}
     - body: {}
 ```
