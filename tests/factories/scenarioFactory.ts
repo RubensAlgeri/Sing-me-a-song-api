@@ -1,5 +1,5 @@
-import { prisma } from "./../../src/database.js";
 import * as recommendationFactory from "./recommendationFactory.js";
+import { resetDatabase } from "../../src/repositories/recommendationRepository.js";
 
 
 export async function createScenarioOneRecommendationWithZeroViews() {
@@ -31,7 +31,5 @@ export async function createScenarioFourElevenRecommendationsWithRandomViews() {
 }
 
 export async function deleteAllData() {
-  await prisma.$transaction([
-    prisma.$executeRaw`TRUNCATE TABLE recommendations RESTART IDENTITY`,
-  ]);
+  await resetDatabase();
 }

@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { recommendationSchema } from "../schemas/recommendationsSchemas.js";
-import { recommendationService } from "../services/recommendationsService.js";
+import { recommendationService, deleteDatabase } from "../services/recommendationsService.js";
 import { wrongSchemaError } from "../utils/errorUtils.js";
 
 async function insert(req: Request, res: Response) {
@@ -53,6 +53,11 @@ async function getById(req: Request, res: Response) {
 
   const recommendation = await recommendationService.getById(+id);
   res.send(recommendation);
+}
+
+export async function resetDatabase(req: Request, res: Response) {
+  await deleteDatabase();
+  res.sendStatus(200)
 }
 
 export const recommendationController = {

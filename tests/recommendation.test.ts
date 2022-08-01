@@ -1,6 +1,6 @@
 import supertest from "supertest";
 import { prisma } from "../src/database.js";
-import app from "./../src/app.js"
+import app from "../src/app.js"
 import * as scenarioFactory from "./factories/scenarioFactory.js"
 import * as recommendationFactory from "./factories/recommendationFactory.js"
 
